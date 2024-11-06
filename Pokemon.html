@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://i.pinimg.com/originals/f4/45/99/f44599c63d97f7278f6381f0316cecb9.gif");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.7);  /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    z-index: 1;  /* Ensures the container is above the background */
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);  /* Text shadow for better readability */
+}
+
+.buttons {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #ffcc00;
+    color: black;
+    transition: background-color 0.3s, transform 0.3s;  /* Transition for smooth effect */
+}
+
+button:hover {
+    background-color: #e6b800;  /* Darker shade on hover */
+    transform: scale(1.05);  /* Slightly enlarge button on hover */
+}
+
+#pokemonDisplay {
+    margin-top: 20px;
+    color: #ffcc00;
+}
+</style>
+<body>
+    <div class="container">
+        <h1>Pokémon Adventure</h1>
+        <div class="buttons">
+            <button onclick="catchPokemon()">Catch Pokémon</button>
+            <button onclick="searchPokemon()">Search Pokémon</button>
+        </div>
+    </div>
+    <script>
+        function catchPokemon() {
+            window.location.href = 'Catch_pokemon.html';
+        }
+
+        function searchPokemon() {
+            window.location.href = 'Search_pokemon.html';
+        }
+    </script>
+</body>
+</html>
